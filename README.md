@@ -49,3 +49,39 @@ This directory is primarily used for **Ablation Studies** and **Robustness Testi
 * **`renewable.m`**: A utility script that manages environment refreshing and task load states during multi-slot simulation runs to maintain system stability.
 * 
 ## 📂 Experimental datasets S1-S6
+
+
+🚀 How to Run the Experiments
+Follow these steps to reproduce the results and performance metrics presented in the paper:
+
+Step 1: Download and Preparation
+
+Clone the Repository: Download the complete project folder from GitHub to your local machine.
+
+
+Environment Setup: Ensure you have MATLAB R2024b or a later version installed.
+
+Add to Path: Open MATLAB and add the project folders (Compare_nsga_slot and S_3test) to your MATLAB path to ensure all helper functions are accessible.
+
+Step 2: Running the System Experiments
+
+Execute Main Script: Run the M3.m script located in the Compare_nsga_slot folder.
+
+
+Optimization Process: This script will initialize the IIoT environment and execute our proposed OUSNSGA-II algorithm alongside other baseline algorithms (NSGA-III, MOEA/D, etc.).
+
+
+
+
+Results Generation: After the simulation completes, the script will automatically calculate the IGD, HV, and Spacing metrics and generate the performance comparison plots.
+
+
+
+
+
+Step 3: Running Ablation Studies (Optional)
+
+Verify Components: To verify the effectiveness of the ISMM and AMS modules, navigate to the S_3test folder and run Ablation_main.m.
+
+
+Trend Analysis: Use Plot_Ablation_Trend.m to visualize how the OUSNSGA-II method outperforms its preliminary versions and other variants
