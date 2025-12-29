@@ -17,9 +17,33 @@ This folder implements the proposed framework alongside several baseline multi-o
 
 ### 3. Metric Evaluation & Helper Functions
 These functions quantify the quality of the identified Pareto-optimal sets according to the metrics defined in the study:
+
+
 * **`calculateHV.m`**: Computes the **Hypervolume (HV)**, measuring the volume of the objective space covered by the solution set.
 * **`calculateIGD.m` / `IGD.m`**: Calculates the **Inverted Generational Distance (IGD)** to assess both convergence and diversity.
 * **`calculateSpread.m`**: Measures the distribution uniformity of solutions, also referred to as the **Spacing value**.
 * **`CalculateTmax.m`**: Evaluates the system's real-time processing capability by calculating the maximum completion time within a single time slot.
 * **`FindNonDominated.m` / `FindAllFronts.m`**: Fundamental sorting utilities that identify non-dominated solutions and organize the population into Pareto ranks.
 * **`EvaluateParticle.m`**: The fitness evaluation engine that interfaces with the **MO-MINLP model** to calculate system latency ($G_1$) and energy consumption ($G_2$).
+
+## 📂 Folder Structure: `S_3test`
+
+This directory is primarily used for **Ablation Studies** and **Robustness Testing** to evaluate the individual contributions of each module within our proposed framework. It features our final optimized method: **OUSNSGA-II**.
+
+### 1. Proposed Method & Evolution
+* **`OUSNSGA_II.m`**: The main implementation of our final proposed method (**OUSNSGA-II**). This script incorporates the complete suite of enhancements, including the Inter-Slot Memory Mechanism (ISMM) and Adaptive Mutation Strategy (AMS), for optimal resource allocation in IIoT fog networks.
+* **`IMyNSGA_II.m`**: An **early-stage preliminary version** of our method. This file represents the baseline development phase of the OUSNSGA-II framework before the final optimizations and refinements were integrated.
+
+### 2. Ablation Study Framework
+* **`Ablation_main.m`**: The master script for conducting ablation experiments. It systematically enables or disables specific modules (ISMM, AMS, HO) to quantitatively verify the performance gains elicited by each component.
+* **`Plot_Ablation_Trend.m`**: A visualization utility used to generate the **Ablation Performance Curves** (such as IGD and HV trajectories) as presented in the experimental analysis.
+* **`EvaluateParticle.m`**: A specialized fitness evaluation function tailored for ablation scenarios, ensuring accurate mapping of system latency and energy consumption objectives.
+
+### 3. Baseline & Comparative Algorithms
+* **`AMOPSO.m`**: Implementation of the Adaptive Multi-Objective Particle Swarm Optimization algorithm, used as a non-genetic baseline for comparison.
+* **`DNSGA_II.m`**: A discrete version of the standard NSGA-II used to test the effectiveness and necessity of our hybrid encoding approach.
+* **`MOEAD.m`**: A decomposition-based MOEA baseline specifically configured for testing against our framework under high-dimensional decision spaces.
+
+### 4. Utility Scripts
+* **`FindAllFronts.m`**: Performs non-dominated sorting to categorize the population into various Pareto ranks.
+* **`renewable.m`**: A utility script that manages environment refreshing and task load states during multi-slot simulation runs to maintain system stability.
