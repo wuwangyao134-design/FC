@@ -37,11 +37,11 @@ These functions quantify the quality of the identified Pareto-optimal sets accor
 This directory is primarily used for **Ablation Studies** and **Robustness Testing** to evaluate the individual contributions of each module within our proposed framework. It features our final optimized method: **OUSNSGA-II**.
 
 ### 1. Proposed Method & Evolution
-* **`OUSNSGA_II.m`**: The main implementation of our final proposed method (**OUSNSGA-II**). This script incorporates the complete suite of enhancements, including the Inter-Slot Memory Mechanism (ISMM) and Adaptive Mutation Strategy (AMS), for optimal resource allocation in IIoT fog networks.
+* **`OUSNSGA_II.m`**: The main implementation of our final proposed method (**OUSNSGA-II**). This script incorporates the complete suite of enhancements, including the Inter-Slot Memory Mechanism (ISMM) and Adaptive Mutation Strategy (LAMS), for optimal resource allocation in IIoT fog networks.
 * **`IMyNSGA_II.m`**: An **early-stage preliminary version** of our method. This file represents the baseline development phase of the OUSNSGA-II framework before the final optimizations and refinements were integrated.
 
 ### 2. Ablation Study Framework
-* **`Ablation_main.m`**: The master script for conducting ablation experiments. It systematically enables or disables specific modules (ISMM, AMS, HO) to quantitatively verify the performance gains elicited by each component.
+* **`Ablation_main.m`**: The master script for conducting ablation experiments. It systematically enables or disables specific modules (ISMM, LAMS, HO) to quantitatively verify the performance gains elicited by each component.
 * **`Plot_Ablation_Trend.m`**: A specialized visualization utility used to export high-definition ablation performance trend lines (corresponds to **Fig. 4** in the paper).
 * **`EvaluateParticle.m`**: A specialized fitness evaluation function tailored for ablation scenarios, ensuring accurate mapping of system latency and energy consumption objectives.
 
