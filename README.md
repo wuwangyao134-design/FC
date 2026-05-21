@@ -5,7 +5,6 @@ This directory serves as the **core experimental framework** for the research. I
 ### 1. Main Execution & Scripting
 * **`M3.m`**: The primary entry point for the system experiments. This script initializes the IIoT environment, configures scenario parameters (S1–S8), and manages the multi-slot optimization process across the entire simulation.
 * **`mean_slot.m` / `mean_slot2.m`**: Scripts responsible for managing temporal dynamics across consecutive time slots, specifically handling average performance data and inter-slot transitions.
-* **`radar.m`**: The visualization script used to generate the **Radar Charts**, illustrating the multi-dimensional trade-off balance between IGD, HV, and Spacing.
 * **`plot5.m` / `plotS.m`**: Specialized plotting utilities for generating Pareto front comparisons and statistical distribution graphs.
 
 ### 2. Optimization Algorithm Library
