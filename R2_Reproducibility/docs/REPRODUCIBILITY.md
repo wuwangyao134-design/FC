@@ -12,9 +12,11 @@ BARON is third-party software and is not included in this repository.
 
 ## 2. Restore the formal data
 
-Download `FC_R2_Results_S1-S8.zip` from the release associated with this code
-version. Extract its eight MAT files into `data/formal_results/` and compare
-their SHA-256 values with `data/manifest.csv`.
+Download
+[`FC_R2_Results_S1-S8.zip`](https://github.com/wuwangyao134-design/FC/releases/latest/download/FC_R2_Results_S1-S8.zip)
+from the latest release. Extract its eight MAT files directly into
+`data/formal_results/` and compare their SHA-256 values with
+`data/manifest.csv`.
 
 ## 3. Reproduce the S1--S8 statistics
 
@@ -28,6 +30,10 @@ Summarize_S1_S8_Metrics
 Generated CSV, MAT, and LaTeX summaries are written to
 `R2_Reproducibility/results/generated/S1_S8_Metric_Summary/`.
 
+A successful run prints the resolved S1--S8 source paths before reporting the
+per-scenario metrics. This saved-result workflow is the recommended first
+verification because it does not rerun the optimizers.
+
 IGD and HV are summarized only over runs that produce a valid feasible
 non-dominated set. FFR is calculated over all 30 runs. Failed runs contribute
 zero to the number of non-dominated solutions.
@@ -38,6 +44,10 @@ Open `Compare_nsga_slot/M4.m`, set `scenario_id` to an integer from 1 to 8,
 and run the script from that directory. The output is written beneath a new
 timestamped `ExperimentResults_Output` directory. Each scenario is run
 separately so that failures or interruptions do not invalidate other cases.
+S1 is recommended for an initial end-to-end execution check. The formal setup
+uses 30 independent runs, 10 slots, 100 individuals, 200 generations, and
+20,000 MODDPG training episodes, so large scenarios require substantial
+computation.
 
 ## 5. Repeat the ablation experiment
 

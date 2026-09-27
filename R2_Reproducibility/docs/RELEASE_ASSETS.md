@@ -1,7 +1,8 @@
 # Release assets
 
-Upload the following files from the local `release_staging/` directory when
-creating the GitHub Release for this code revision.
+The GitHub Release associated with this revision provides the following
+assets. Their local source copies are retained in the ignored
+`release_staging/` directory.
 
 | Asset | Size | SHA-256 | Purpose |
 |---|---:|---|---|
