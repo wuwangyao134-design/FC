@@ -1,0 +1,36 @@
+# MATLAB temporary files
+*.asv
+*.autosave
+*.m~
+*.fig
+
+# LaTeX build products
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# Commercial solver binaries and licenses are never redistributed
+baron*.exe
+barin.exe
+*.dll
+*.lic
+
+# Generated/local outputs
+**/ExperimentResults_Output/
+**/AblationResults_Output/
+R2_Reproducibility/results/generated/
+release_staging/
+
+# Formal raw result files are distributed as versioned release assets
+R2_Reproducibility/data/formal_results/*.mat
+!R2_Reproducibility/data/formal_results/README.md
+
+# Pre-correction audit input is release-only, not manuscript data
+R2_Reproducibility/audit/MODDPG/S2_PreCorrection_NotUsedInManuscript.mat
